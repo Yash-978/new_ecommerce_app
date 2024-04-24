@@ -63,9 +63,12 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-#   - Assets/Images/ProductImages
+   - Assets/Images/ProductImages
    - Assets/Images/Profileimages/pexels-mohamed-abdelghaffar-771742.jpg
    - Assets/Images/ProductImages/1.jpeg
+   - Assets/Images/ProductImages/joshua-flores-5RQffqRkmWQ-unsplash.jpg
+   - Assets/Images/ProductImages/muffins_1.jpg
+   - Assets/Images/ProductImages/pexels-pixabay-301972.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
