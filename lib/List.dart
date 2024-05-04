@@ -29,7 +29,7 @@
 //
 //
 //
-// /////////////////////////////////
+/////////////////////////////////
 // Certainly! Let's expand the product lineup with another cookie variant:
 //
 // **Product 1: Heavenly Chocolate Chip Cookies**
@@ -139,7 +139,7 @@
 // Shipping Information: Standard shipping is available for $4.99, with estimated delivery within 3-5 business days. Free shipping for orders over $50.
 // Promotional Information: Get a free jar of artisanal peanut butter with the purchase of two boxes of Chewy Peanut Butter Cookies.
 // Social Sharing: Spread the joy of Chewy Peanut Butter Cookies with your friends and family on social media platforms.
-List cokieesDetail=[
+List cookiesList=[
   {
     'name':'Chewy Peanut Butter Cookies',
     'description':"'Experience the perfect combination of nutty flavor and chewy texture with our Chewy Peanut Butter Cookies. Packed with creamy peanut butter and topped with a sprinkle of sea salt, these cookies are a peanut lover's dream.'",
@@ -151,7 +151,7 @@ List cokieesDetail=[
     'sodium':'140mg',
     'sugar':'9g',
     'protein':'4g',
-    'img':''
+    'img':'Assets/Images/ProductImages/1.jpeg'
 
   },
   {

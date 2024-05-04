@@ -1,7 +1,10 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+// import 'package:new_ecommerce_app/List.dart';
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key});
@@ -32,6 +35,7 @@ class _homeScreenState extends State<homeScreen> {
                   shape: BoxShape.circle,
                 ),
                 child: Row(
+
                   children: [
                     Icon(
                       Icons.home_filled,
@@ -209,8 +213,8 @@ class _homeScreenState extends State<homeScreen> {
                   ],
                 ),
               ),
-              ...List.generate(cookiesDetail.llength, (index) =>cookieDetail() )
-              cookieDetail(height, width),
+              cookieDetail(width,height),
+              // cookieDetail(height, width),
               /*offers and see more*/
               Padding(
                 padding: const EdgeInsets.all(12),
@@ -244,7 +248,7 @@ class _homeScreenState extends State<homeScreen> {
 
               /*offers list*/
               Container(
-                height: height * 0.18,
+                height: height * 0.15,
                 width: width * 0.95,
                 decoration: BoxDecoration(
                     color: Color(0xff363841),
@@ -269,7 +273,8 @@ class _homeScreenState extends State<homeScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 80,
+                      height: 100,
+                      width: 100,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -294,13 +299,25 @@ class _homeScreenState extends State<homeScreen> {
                         ],
                       ),
                     ),
-                    Text(
-                      'Price',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    Column(mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Price',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          'Ratings',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -330,94 +347,91 @@ class _homeScreenState extends State<homeScreen> {
     );
   }
 
-  Container cookieDetail(double height, double width) {
+  Container cookieDetail(
+    double height,
+    double width,) {
     return Container(
-              height: height * 0.400, //320
-              width: width * 0.450,
-              //185
-              // color:Color(0xff363841),
+      height: height * 0.870, //320
+      width: width * 0.200,
+      //185
+      // color:Color(0xff363841),
+      child: Column(
+        children: [
+          Container(
+            height: 145, // height * 0.140, //130
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(image: AssetImage('Assets/Images/ProductImages/1.jpeg')),
+              border: Border.all(color: Colors.white, style: BorderStyle.solid),
+            ),
+          ),
+          Container(
+            height: 210, //height * 0.180,
+            decoration: BoxDecoration(
+              color: Color(0xff363841),
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(15),
+                  topLeft: Radius.circular(15),
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(100)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    height: 145, // height * 0.140, //130
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: AssetImage(
-                              'Assets/Images/ProductImages/1.jpeg')),
-                      border: Border.all(
-                          color: Colors.white, style: BorderStyle.solid),
-                    ),
+                  Text(
+                    'Chocolates chips',
+                    overflow: TextOverflow.clip,
+                    style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
-                  Container(
-                    height: 210, //height * 0.180,
-                    decoration: BoxDecoration(
-                      color: Color(0xff363841),
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(15),
-                          topLeft: Radius.circular(15),
-                          bottomLeft: Radius.circular(15),
-                          bottomRight: Radius.circular(100)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            'Chocolates chips',
-                            overflow: TextOverflow.clip,
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 25),
-                          ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.workspace_premium_rounded,
-                                color: Color(0xffE68135),
-                                size: 20,
-                              ),
-                              Text(
-                                'PREMIUM',
-                                overflow: TextOverflow.clip,
-                                style: TextStyle(
-                                    color: Color(0xffE68135), fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Align(
-                              alignment: Alignment.bottomLeft,
-                              child: Text(
-                                'price',
-                                overflow: TextOverflow.clip,
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
-                              )),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                height: 64, //height * 0.60, //130
-                                width: 64, //width * 0.60, //130
-                                decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                child: Icon(
-                                  Icons.arrow_forward_rounded,
-                                  color: Colors.white,
-                                  size: 30,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.workspace_premium_rounded,
+                        color: Color(0xffE68135),
+                        size: 20,
                       ),
-                    ),
+                      Text(
+                        'PREMIUM',
+                        overflow: TextOverflow.clip,
+                        style:
+                            TextStyle(color: Color(0xffE68135), fontSize: 15),
+                      ),
+                    ],
+                  ),
+                  Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Text(
+                        'price '+ 'USD',
+                        overflow: TextOverflow.clip,
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      )),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        height: 64, //height * 0.60, //130
+                        width: 64, //width * 0.60, //130
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Icon(
+                          Icons.arrow_forward_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            );
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
